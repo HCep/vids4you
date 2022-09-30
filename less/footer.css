@@ -1,0 +1,139 @@
+.center-text {
+  text-align: center;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.absolute-0000 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.v-align-transform {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width:599px) {
+  .v-align-transform {
+    top: 50%;
+    left: 50%;
+  }
+}
+.upper {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 781px) {
+  .text-right {
+    text-align: right;
+  }
+}
+.nowrap {
+  white-space: nowrap;
+}
+footer {
+  background-color: #202020;
+}
+.footer-menu {
+  width: 100%;
+}
+.footer-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media only screen and (min-width: 781px) {
+  .footer-menu ul {
+    height: 65px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer-menu ul {
+    transform: translateX(-50%);
+    position: absolute;
+    left: 40%;
+  }
+}
+@media (min-width: 1600px) {
+  .footer-menu ul {
+    left: 50%;
+  }
+}
+.footer-menu ul li {
+  width: 100%;
+}
+@media only screen and (min-width: 781px) {
+  .footer-menu ul li {
+    width: auto;
+  }
+}
+.footer-menu ul li a {
+  font-size: 14px;
+}
+.logo-footer-cnt .widget .wp-block-columns {
+  margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .logo-footer-cnt .widget .wp-block-columns {
+    flex-wrap: nowrap!important;
+  }
+}
+.logo-footer-cnt .widget .wp-block-columns .wp-block-column:nth-child(1) {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.logo-footer-cnt .widget .wp-block-columns .wp-block-column img {
+  padding-left: 20px;
+}
+@media only screen and (min-width: 781px) {
+  .logo-footer-cnt .widget .wp-block-columns .wp-block-column img {
+    padding-left: 0px;
+  }
+}
+.footer-section-one,
+.footer-section-two {
+  border-bottom: 1px solid #4f4c4c;
+}
+@media only screen and (min-width: 781px) {
+  .footer-section-one {
+    height: 65px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-section-one .container {
+    flex-wrap: wrap;
+  }
+}
+.links-footer {
+  width: 100%;
+}
+.links-footer .widget {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+@media only screen and (min-width: 781px) {
+  .links-footer .widget {
+    width: 60%;
+  }
+}
+.links-footer p {
+  color: #7A7A7A;
+}
+.brand-link {
+  display: block;
+  text-align: center;
+  color: #7A7A7A;
+}
+.brand-link:hover {
+  text-decoration: none;
+  color: #7A7A7A;
+}

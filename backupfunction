@@ -1,0 +1,63 @@
+if(!empty(get_field('product_photos'))): 
+			  $images = acf_photo_gallery('product_gallery', $post->ID);
+    //Check if return array has anything in it
+    if( count($images) ):
+        //Cool, we got some data so now let's loop over it
+        foreach($images as $image){
+            $id = $image['id']; // The attachment id of the media
+            $title = $image['title']; //The title
+            $caption= $image['caption']; //The caption
+            $full_image_url= $image['full_image_url']; //Full size image url
+            $full_image_url = acf_photo_gallery_resize_image($full_image_url, 262, 160); //Resized size to 262px width by 160px height image url
+            $thumbnail_image_url= $image['thumbnail_image_url']; //Get the thumbnail size image url 150px by 150px
+            $url= $image['url']; //Goto any link when clicked
+            $target= $image['target']; //Open normal or new tab
+            $alt = get_field('photo_gallery_alt', $id); //Get the alt which is a extra field (See below how to add extra fields)
+            $class = get_field('photo_gallery_class', $id); //Get the class which is a extra field (See below how to add extra field ?>
+			<div class="section-product-gallery">
+			    <div class="vid-image shadow-box">
+			    <div class="video-thumb">
+			    	<a href="<?php echo get_permalink(); ?>">
+			     		<img src="<?php echo $full_image_url; ?>" alt="" title=""></a>
+					</div></div>
+			
+			    </div>
+			  
+				<script type="text/javascript">
+					jQuery(document).ready(function() {
+						var images = [];
+						var j = 0;
+					var interval;
+						var i = 0;
+
+						jQuery(function () {
+							jQuery(".video-thumb a img").mouseover(function () {
+							
+								interval = setInterval(fadeDivs(), 300);
+							})
+						.mouseout(function () {
+									clearInterval(interval);
+
+							});
+						});
+
+						function fadeDivs() {
+							i = i < images.length ? i : 0;
+							jQuery('.video-thumb a img').animate(100, function() {
+								jQuery(this).attr('src', images[i]).animate(100);
+							});
+							i++;
+    }
+	jQuery( ".video-thumb a img" ).each(function(j){
+					
+					 
+					images[j] = '<?php echo $full_image_url; ?>';
+					
+				   
+				   });
+
+				});
+		
+				</script>
+				<?php } endif; ?>
+			<?php endif; ?>

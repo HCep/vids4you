@@ -1,0 +1,151 @@
+@import 'variables.less';
+@import 'mixins.less';
+header .top-bar{
+    background-color:#202020;
+    box-shadow:0px 6px 20px rgba(0,0,0,0.3);
+    
+}
+.content-area{
+    padding:0px;
+    @media @x-large{
+        padding:1rem 0px;
+    }
+}
+.navbar {
+    justify-content:space-between;
+    @media @medium{
+        justify-content:baseline;
+    }
+}
+header .brand{
+    padding-bottom:0px;
+    @media @medium{
+        padding-bottom:60px;
+    }
+}
+.brand{
+    
+    @media @medium{
+        width:100%;
+    }
+}
+.main-menu{
+    justify-content:flex-end;
+    ul{
+    li{ 
+        a{
+            color:#fff;
+            font-size:14px;
+            display:inline-block;
+
+        }
+    }}
+}
+.navbar{
+    padding:5px;
+  
+}
+.navbar-nav {
+    padding:0px 10px;
+}
+.nav-item-header{
+    color:#fff;
+    font-size:14px;
+    display:inline-block;
+   
+}
+@media @medium{
+    .navbar-expand-lg .navbar-collapse{
+        justify-content:flex-end;
+    }
+}
+.hamburger--squeeze{
+   
+    @media @medium{
+        margin:30px auto;
+    }
+}
+.account-link{
+    a.nav-link{
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+        padding: 0px 0.5rem;
+        @media (max-width:1200px){
+            width:40px;
+            margin:20px;
+        }
+        img{
+            order: -1;
+            max-width: 25px;
+            margin-bottom:5px;
+            @media @x-large{
+                max-width: 30px;
+            }
+        }
+    }
+}
+.custom-logo-link{
+ 
+    img{
+        width:180px;
+       @media @small{
+        width:250px;
+       }
+    }
+    @media @medium{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -10px);
+    }
+}
+#menu-menu-glowne, #menu-menu-glowne-en{
+   
+  @media @large{
+   display:flex;
+   flex-wrap:nowrap;
+    align-items:center;
+    }
+    .weglot-lang:nth-child(1){
+        @media @large{
+            margin-right:0px;
+        }
+    }
+    .weglot-lang {
+        display: inline-block;
+        height: 100%;
+        padding: 0px 5px;
+        border: 1px solid white;
+    @media @large{
+        margin-right:50px;
+    }
+    }
+		.weglot-lang a{
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+ 
+}
+.cart .items{
+    font-size:13px;
+    font-weight:bold;
+}
+header .brand img{
+    max-width:180px;
+    @media @small{
+        max-width:250px;
+    }
+   
+}
+.cart .cart-icon{
+    width:25px;
+    height:25px;
+    background-size:contain;
+    @media @x-large{
+        width:30px;
+        height:30px;
+    }
+}

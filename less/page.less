@@ -1,0 +1,168 @@
+@import 'variables.less';
+@import 'mixins.less';
+.banner_container{
+    display:flex;
+    position:relative;
+    margin:0 auto;
+    flex-wrap:nowrap;
+    @media @small{
+        width:700px;
+      
+    }
+    &:after{
+        content: '';
+        z-index: -1;
+        position: absolute;
+        display:none;
+        bottom: -20px;
+        left:0;
+        width: 100%;
+        height: 100px;
+        border-radius: 100px;
+        box-shadow: 0px 19px 20px #f93030;
+        background-color: #F93030;
+        opacity: 0.1;
+        @media @small{
+            display:block;
+        }
+    
+    }
+
+    .banner_image{
+        @media @small{
+            width:30%;
+            order:0;
+           
+        }
+    }
+    .banner_content{
+        display:flex;
+        position:relative;
+        flex-direction:column;
+        justify-content:space-around;
+        padding:15px 20px;
+        border-radius:0px 30px 30px 30px;
+        background: rgb(255,52,52);
+background: linear-gradient(180deg, rgba(255,52,52,1) 0%, rgba(255,52,52,1) 15%, rgba(134,15,15,1) 100%, rgba(96,7,7,1) 100%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%);
+@media @small{
+    padding:20px 50px;
+}
+&:after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: -20px;
+    left:0;
+    width: 100%;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0px 19px 20px #f93030;
+    background-color: #F93030;
+    opacity: 0.1;
+    display:block;
+    @media @small{
+        display:none;
+    }
+
+}
+h3.banner_slogan{
+            color:#fff;
+            font-size:15px;
+            text-align:center;
+            @media @small{
+                font-size:35px;
+            }
+            @media @x-large{
+                font-size:38px;
+            }
+
+        }
+        h3.banner_slogan-logged-in{
+            font-size:15px;
+            color:#fff;
+            text-align:center;
+            @media @small{
+                font-size:20px;
+            }
+            @media @x-large{
+                font-size:26px; 
+            }
+        }
+        a{
+            .upper;
+            display:block;
+            padding:10px 25px;
+            text-align:center;
+            width:85%;
+            border-radius:0px 10px 10px 10px;
+            background: rgb(255,255,255);
+            font-weight:bold;
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 3%, rgba(218,218,218,1) 93%, rgba(218,218,218,1) 100%);
+            margin:0px auto;
+            color:#D30000;
+            font-size:16px;
+            box-shadow:0px 3px 6px rgba(0,0,0,0.4);
+            &:hover{
+                color:#D30000;
+            }
+        }
+    }
+}
+.section-product-gallery{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+
+    .single-thumbnail-cnt{
+        width:calc(50%);
+        
+        @media @medium{
+            width:calc(20%);
+        }
+        
+    }
+}
+.wpcf7-form{
+    width:100%;
+    margin:0 auto;
+    @media @medium{
+        width:30%;
+    }
+    label{
+        width:100%;
+        .form-input, .form-textarea{
+            width:100%;
+            background-color:transparent;
+            color:#fff;
+            &:active, &:focus{
+                outline:0;
+                
+            }
+        }
+        .form-textarea{
+            height:140px;
+        }
+       
+    }
+    .wpcf7-submit{
+        display: block;
+        margin: 10px auto;
+        width: 40%;
+        padding: 8px;
+        border-radius:0px 10px 10px 10px;
+        color:#fff;
+        background: rgb(255,52,52);
+        background: linear-gradient(180deg, rgba(255,52,52,1) 0%, rgba(255,52,52,1) 15%, rgba(134,15,15,1) 100%, rgba(96,7,7,1) 100%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%);
+        border:0px;
+    }
+    
+}
+.log-reg-container{
+  
+    form, .registration-form-container {
+        width:100%;
+        @media @medium{
+            width:auto;
+        }
+    }
+}
